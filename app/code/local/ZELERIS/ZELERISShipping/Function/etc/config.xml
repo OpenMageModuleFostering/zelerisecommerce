@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <ZELERIS_ZELERISShipping_Function>
+            <version>1.0.0</version>
+        </ZELERIS_ZELERISShipping_Function>
+    </modules>
+ 
+    <global>
+        <helpers>
+            <flatrate>
+                <class>ZELERIS_ZELERISShipping_Function_FlatRate</class>
+            </flatrate>
+	     <tablerate>
+                <class>ZELERIS_ZELERISShipping_Function_TableRate</class>
+            </tablerate>
+        </helpers> 
+    </global>
+</config>

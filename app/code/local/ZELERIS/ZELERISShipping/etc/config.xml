@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+       	<ZELERIS_ZELERISShipping> 
+            		<version>2.0.0</version>
+        	</ZELERIS_ZELERISShipping>
+    	</modules>
+
+    	<global>
+        	<models>
+            		<ZELERISShipping>
+                		<class>ZELERIS_ZELERISShipping_Model</class>
+            		</ZELERISShipping>
+
+            		<sales>
+                		<rewrite>
+                    			<order_shipment>ZELERIS_ZELERISShipping_Model_ZELERIS_Shipment</order_shipment>
+                		</rewrite>
+            		</sales>
+        	</models>
+
+        	<resources>
+            		<ZELERISShipping_setup>
+                		<setup>
+                    			<module>ZELERIS_ZELERISShipping</module>
+                		</setup>
+                		<connection>
+                    			<use>core_setup</use>
+                		</connection>
+            		</ZELERISShipping_setup>
+        	</resources>
+
+        	<blocks>
+            		<adminhtml>
+                		<rewrite>
+                    			<sales_order_shipment_view>ZELERIS_ZELERISShipping_Adminhtml_Block_Sales_Order_Shipment_View</sales_order_shipment_view>
+                		</rewrite>
+            		</adminhtml>
+        	</blocks>
+    	</global>
+
+	<frontend>
+		<layout>
+			<updates>
+				<zeleris_puntosentrega module="ZELERIS_ZELERISShipping">
+					<file>zeleris_puntosentrega.xml</file> 
+				</zeleris_puntosentrega>
+			</updates>
+		</layout>
+	</frontend>
+
+	<adminhtml>
+		<layout>
+			<updates>
+				<zeleris_sales module="ZELERIS_ZELERISShipping">
+					<file>zeleris_sales.xml</file> 
+				</zeleris_sales>
+			</updates>
+		</layout>
+	</adminhtml>
+
+	<default>
+        	<carriers>
+            		<ZELERISShipping>
+  				<version>MT-2.0.0</version>
+         			<active>1</active>
+                		<title>Zeleris</title>
+		  		<gateway_url>https://wscli.zeleris.com/ecomportal.asmx?wsdl</gateway_url>
+		  		<GUID></GUID>
+		  		<productname>No indicado</productname>
+                		<servicios>0</servicios>
+		  		<modo>0</modo>
+                		<handling_type>F</handling_type>
+                		<handling_fee>0</handling_fee>
+                		<free_shipping_enable>False</free_shipping_enable>
+                		<free_shipping_subtotal>0</free_shipping_subtotal>
+                		<free_method>0</free_method>
+		  		<habilitar_pago_contrareembolso>F</habilitar_pago_contrareembolso>
+		  		<forma_pago_contrareembolso></forma_pago_contrareembolso>
+		  		<showmethod>N</showmethod>
+		  		<specificerrmsg>No es posible obtener la tarifa de transporte. Por favor, ha de ponerse en contacto con nosotros.</specificerrmsg>
+                		<model>ZELERISShipping/ZELERIS_ZELERISShipping</model>
+            		</ZELERISShipping>
+        	</carriers>
+    	</default>
+</config>

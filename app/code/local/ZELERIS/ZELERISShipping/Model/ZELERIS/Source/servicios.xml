@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<servicios>
+	<servicio codigo="1" descripcion="Nacional urgente" imagen="http://resources.zeleris.com/img/ecom_logo_zeleris_ds.png" ayuda="Nacional urgente"></servicio>
+	<servicio codigo="2" descripcion="Nacional estándar" imagen="http://resources.zeleris.com/img/ecom_logo_zeleris_ds.png" ayuda="Nacional estándar"></servicio>
+	<servicio codigo="50" descripcion="Puntos de entrega" imagen="http://resources.zeleris.com/img/ecom_logo_zeleris_ds.png" ayuda="Puntos de entrega"></servicio>
+	<servicio codigo="101" descripcion="Internacional urgente" imagen="http://resources.zeleris.com/img/ecom_logo_zeleris_ds.png" ayuda="Internacional urgente"></servicio>
+	<servicio codigo="102" descripcion="Internacional estándar" imagen="http://resources.zeleris.com/img/ecom_logo_zeleris_ds.png" ayuda="Internacional estándar"></servicio>
+</servicios>

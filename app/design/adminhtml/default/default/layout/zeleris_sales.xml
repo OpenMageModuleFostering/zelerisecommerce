@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<layout version="0.1.0">
+
+	<adminhtml_sales_order_shipment_new>
+		<reference name="order_items">
+			<action method="setTemplate">
+				<template>zeleris/sales/order/shipment/create/items.phtml</template>
+			</action>
+		</reference>
+	</adminhtml_sales_order_shipment_new>
+</layout>

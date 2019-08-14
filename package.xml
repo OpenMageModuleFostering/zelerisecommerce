@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package>
+    <name>ZelerisEcommerce</name>
+    <version>2.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://www.zeleris.com">Zeleris</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>El m&#xF3;dulo de Zeleris permite una integraci&#xF3;n sencilla de la tienda con el Sistema de Transporte Zeleris.</summary>
+    <description>Entre las funcionalidades del M&#xF3;dulo destacan:&#xD;
+&#xD;
+- Parametrizaci&#xF3;n flexible de servicios est&#xE1;ndar y urgente.&#xD;
+- Servicios nacionales e internacionales.&#xD;
+- Configuraci&#xF3;n de precios de transporte.&#xD;
+- Asignaci&#xF3;n de costes de manipulado.&#xD;
+- Fijaci&#xF3;n de importes de compra a partir de los cuales el transporte es gratuito.&#xD;
+- Gesti&#xF3;n de pagos contrareembolso.&#xD;
+&#xD;
+Para informaci&#xF3;n adicional sobre el m&#xF3;dulo as&#xED; como cuestiones relacionadas con su instalaci&#xF3;n o puesta en funcionamiento puede enviar un correo a la direcci&#xF3;n info.cac@zeleris.com. Le recordamos que para poder utilizar este m&#xF3;dulo es necesario estar dado de alta como cliente de Zeleris.</description>
+    <notes>Zeleris ecommerce (s&#xF3;lo clientes Zeleris).</notes>
+    <authors><author><name>zeleris</name><user>zeleris</user><email>miguel.reygondaud@telefonica.com</email></author></authors>
+    <date>2013-10-08</date>
+    <time>16:28:49</time>
+    <contents><target name="magelocal"><dir name="ZELERIS"><dir name="ZELERISShipping"><dir name="Adminhtml"><dir name="Block"><dir name="Sales"><dir name="Order"><dir name="Shipment"><file name="View.php" hash="764cce4c57a2797cb8ff93ff8e6c3021"/></dir></dir></dir></dir></dir><dir name="Function"><dir name="FlatRate"><file name="Data.php" hash="c7c291d9486da259a9363c1c2bad9fcd"/></dir><dir name="TableRate"><file name="Data.php" hash="0b8e1bda54698cbb408767922701a71f"/></dir><dir name="etc"><file name="config.xml" hash="fcab25cb9c31c363b7aff9f83cb0debb"/></dir></dir><dir name="Model"><dir name="ZELERIS"><file name="Shipment.php" hash="20533088f8954732ec2b63507f7b26b7"/><dir name="Source"><file name="Method.php" hash="b8e856be9ba689fe895b9462e152cab0"/><file name="Modo.php" hash="9a29439f5f06b84b908af67d3c8ed553"/><file name="servicios.xml" hash="64f2dea0e7c14290925e28c27d9225a7"/></dir><file name="ZELERISShipping.php" hash="c42a26917acd6641610d58254cb1341f"/></dir></dir><dir name="etc"><file name="config.xml" hash="bd33315795750820fd8c8db886ddd7d4"/><file name="system.xml" hash="e4e89170e5f9ac2bce7b23b265ec87ea"/></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="zeleris_sales.xml" hash="2a69bb214fbce985aa001a6eac0b0cb1"/></dir><dir name="template"><dir name="zeleris"><dir name="sales"><dir name="order"><dir name="shipment"><dir name="create"><file name="items.phtml" hash="391139646e63e4efa51b0ac8999ac5db"/></dir></dir></dir></dir></dir></dir></dir></dir></dir><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="zeleris_puntosentrega.xml" hash="2d2cf02142fdb03f8e7f5d68af3e00fd"/></dir><dir name="template"><dir name="zeleris"><dir name="puntosentrega"><dir name="checkout"><dir name="onepage"><file name="shipping.phtml" hash="1a0585b3a7cd5ad719c0e5b8920d1041"/><dir name="shipping_method"><file name="available.phtml" hash="43a6209666d35703196679ce44d51949"/></dir><file name="shipping_method.phtml" hash="3437266522ab16bc5f6480d54b4f298b"/></dir></dir><file name="puntosentrega.php" hash="2732f18287c63d7787415b23f6dbcff2"/></dir></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="ZELERIS_ZELERISShipping.xml" hash="a2ec18161b147338401305ef2cb8c70d"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.0.1</min><max>5.5.4</max></php></required></dependencies>
+</package>

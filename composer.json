@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/ZelerisEcommerce",
+    "type": "magento-module",
+    "license": "Zeleris",
+    "homepage": "",
+    "description": "El módulo de Zeleris permite una integración sencilla de la tienda con el Sistema de Transporte Zeleris.",
+    "authors": [
+    {
+        "name": "zeleris",
+        "email": "miguel.reygondaud@telefonica.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

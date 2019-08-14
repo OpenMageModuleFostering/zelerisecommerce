@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+	<config>
+		<modules>
+      			<ZELERIS_ZELERISShipping>
+            			<active>true</active>
+            			<codePool>local</codePool>
+        		</ZELERIS_ZELERISShipping>
+			<ZELERIS_ZELERISShipping_Function>
+				<active>true</active>
+            			<codePool>local</codePool>
+			</ZELERIS_ZELERISShipping_Function>
+    		</modules>
+	</config>

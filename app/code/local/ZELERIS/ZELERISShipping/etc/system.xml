@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<config>
+  <sections>
+    <carriers>
+      <groups>
+        <ZELERISShipping translate="label" module="shipping">
+          <label>Zeleris</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>1</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+
+          <fields>
+	     <version translate="label">
+              <label>Versión</label>
+		<comment></comment>
+              <frontend_type>label</frontend_type>
+              <sort_order>1</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </version>
+
+	     <title translate="label">
+              <label>Nombre del transportista</label>
+		<comment></comment>
+              <frontend_type>text</frontend_type>
+              <sort_order>2</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </title>
+
+            <active translate="label">
+              <label>Activado</label>
+		<comment></comment>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>3</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </active>
+
+	     <gateway_url translate="label">
+              <label>URL Gateway</label>
+		<comment>Dirección de conexión con Zeleris. No modificar excepto por indicación de Zeleris.</comment>
+              <frontend_type>text</frontend_type>
+              <sort_order>4</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </gateway_url>
+
+            <GUID translate="label">
+              <label>Identificador de cliente (GUID)</label>
+              <comment>Dato proporcionado por Zeleris. No modificar excepto por indicación de Zeleris.</comment>
+              <frontend_type>text</frontend_type>
+              <sort_order>5</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </GUID>
+
+	     <productname translate="label">
+              <label>Descripción mercancía</label>
+		<comment>Descripción generica de la mercancía aplicable en envíos que requieran tramites de aduana. (Hasta 20 caracteres de longitud)</comment>
+              <frontend_type>text</frontend_type>
+              <sort_order>6</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </productname>
+
+            <servicios translate="label">
+		<label>Servicios</label>
+		<comment>Servicios de transporte que se ofrecen a los compradores.</comment>
+              <frontend_type>multiselect</frontend_type>
+              <source_model>ZELERISShipping/ZELERIS_Source_Method</source_model>
+              <sort_order>7</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <can_be_empty>0</can_be_empty>
+            </servicios>
+
+	     <modo translate="label">
+                <label>Modo</label>
+		  <comment>Permite indicar si el precio del transporte será el devuelto por el Web Service de Zeleris, o uno de los calculados localmente por Magento según la información introducida en 'Table Rates' o en 'Flat Rate'. Seleccione el modo de cálculo adecuado.</comment>
+                <frontend_type>select</frontend_type>
+                <source_model>ZELERISShipping/ZELERIS_Source_Modo</source_model>
+                <sort_order>8</sort_order>
+                <show_in_default>1</show_in_default>
+                <show_in_website>1</show_in_website>
+                <show_in_store>0</show_in_store>
+            </modo>
+
+            <handling_type translate="label">
+                <label>Tipo de coste de manipulado</label>
+		  <comment>Define un coste de manipulado o preparación de pedido, bien fijo ('Fixed'), bien un porcentaje sobre la base imponible del pedido ('Percent').</comment>
+                <frontend_type>select</frontend_type>
+                <source_model>shipping/source_handlingType</source_model>
+                <sort_order>9</sort_order>
+                <show_in_default>1</show_in_default>
+                <show_in_website>1</show_in_website>
+                <show_in_store>0</show_in_store>
+            </handling_type>
+
+            <handling_fee translate="label">
+                <label>Coste fijo o porcentaje de manipulado</label>
+		  <comment>Indica el coste fijo o el porcentaje sobre la base imponible de su pedido a cobrar al comprador en concepto de gastos de manipulación.</comment>
+                <frontend_type>text</frontend_type>
+                <sort_order>10</sort_order>
+                <show_in_default>1</show_in_default>
+                <show_in_website>1</show_in_website>
+                <show_in_store>0</show_in_store>
+            </handling_fee>
+
+            <free_shipping_enable translate="label">
+                <label>Transporte gratuito</label>
+		  <comment>Seleccione 'Enable' para habilitar el transporte gratuito en las compras que alcancen o superen el 'Umbral para transporte gratuito'. Si no quiere ofrecer transporte gratuito seleccione 'Disable'.</comment>
+                <frontend_type>select</frontend_type>
+                <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                <sort_order>11</sort_order>
+                <show_in_default>1</show_in_default>
+                <show_in_website>1</show_in_website>
+                <show_in_store>0</show_in_store>
+            </free_shipping_enable>
+
+            <free_shipping_subtotal translate="label">
+                <label>Umbral para transporte gratuito</label>
+		  <comment>Importe del pedido, sin impuestos, a partir del cual el transporte pasa a ser gratuito para el comprador, siempre que la opción 'Transporte gratuito' este establecida a 'Enable'.</comment>
+                <frontend_type>text</frontend_type>
+                <sort_order>12</sort_order>
+                <show_in_default>1</show_in_default>
+                <show_in_website>1</show_in_website>
+                <show_in_store>0</show_in_store>
+            </free_shipping_subtotal>
+
+            <free_method translate="label">
+         	  <label>Servicio gratuito</label>
+                <comment>Servicio de transporte a utilizar en los envíos gratuitos.</comment>
+                <frontend_type>select</frontend_type>
+                <frontend_class>free-method</frontend_class>
+                <source_model>ZELERISShipping/ZELERIS_Source_Method</source_model>
+                <sort_order>13</sort_order>
+                <show_in_default>1</show_in_default>
+                <show_in_website>1</show_in_website>
+                <show_in_store>0</show_in_store>
+            </free_method>
+
+	     <habilitar_pago_contrareembolso translate="label">
+                <label>Habilitar pago contra-reembolso</label>
+		  <comment>Permite parametrizar Magento para realizar envíos contra-reembolso. Seleccione 'Yes' para habilitar el pago contra-reembolso.</comment>
+                <frontend_type>select</frontend_type>
+                <source_model>adminhtml/system_config_source_yesno</source_model>
+                <sort_order>14</sort_order>
+                <show_in_default>1</show_in_default>
+                <show_in_website>1</show_in_website>
+                <show_in_store>0</show_in_store>
+            </habilitar_pago_contrareembolso>
+
+	     <forma_pago_contrareembolso translate="label">
+         	  <label>Pago contra-reembolso</label>
+                <comment>Si dispone de una forma de pago contra-reembolso configurada actualmente en Magento, indique aquí cual es.</comment>
+                <frontend_type>select</frontend_type>
+                <frontend_class>0</frontend_class>
+                <source_model>Mage_Adminhtml_Model_System_Config_Source_Payment_Allowedmethods</source_model>
+                <sort_order>15</sort_order>
+                <show_in_default>1</show_in_default>
+                <show_in_website>1</show_in_website>
+                <show_in_store>0</show_in_store>
+            </forma_pago_contrareembolso>
+
+            <showmethod translate="label">
+              <label>Mostrar servicios en caso de error</label>
+              <comment>Indica si se mostrarán o no los servicios al comprador en caso de no estar disponibles para el destino seleccionado, o no disponer de precio, etc.</comment>
+              <frontend_type>select</frontend_type>
+              <sort_order>16</sort_order>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </showmethod>
+
+            <specificerrmsg translate="label">
+              <label>Mensaje de error</label>
+              <comment>Texto que se mostrará al comprador, en caso de error de comunicaciones, al consultar precios de transporte.</comment>
+              <frontend_type>textarea</frontend_type>
+              <sort_order>17</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </specificerrmsg>
+
+          </fields>
+
+        </ZELERISShipping>
+      </groups>
+    </carriers>
+  </sections>
+</config>
